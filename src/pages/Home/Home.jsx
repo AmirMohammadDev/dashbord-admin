@@ -82,7 +82,7 @@ export default function Home() {
                         <div className="flex max-lg:flex-col ">
                             <div className="w-[145px]">
                                 <div className="mt-8 mr-5">
-                                    <span className="font-bold text-[#1C275A] text-4xl inline-block">
+                                    <span className="font-bold text-[#1C275A] dark:text-white text-4xl inline-block">
                                         $37.5k
                                     </span>
                                     <p className="text-[#A3AED0] flex items-center gap-2 mt-3">

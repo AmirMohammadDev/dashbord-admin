@@ -51,7 +51,7 @@ export default function App() {
                 className={`xl:static fixed top-0 left-0 h-full bg-white dark:bg-[#111C44] p-5 transition-transform duration-300 z-50
       ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} w-[300px]`}
             >
-                <Sidebar />
+                <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
             </div>
             <div className="flex-1 flex flex-col px-5 py-8 w-full overflow-y-auto">
                 <div className="w-full ">

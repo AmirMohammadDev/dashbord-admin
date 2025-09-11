@@ -8,11 +8,11 @@ import LockIcon from '@mui/icons-material/Lock';
 import IconBox from "./IconBox";
 import { NavLink } from "react-router-dom";
 
-export default function Sidebar() {
+export default function Sidebar({ setIsSidebarOpen }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const items = [
-    { Icon: HomeIcon, title: "Main Dashboard" , route:"/" },
+    { Icon: HomeIcon, title: "Main Dashboard" , route:"/home" },
     { Icon: ShoppingCartIcon, title: "NFT Marketplace" , route:"/newUser" },
     { Icon: BarChartIcon, title: "Data Tables" , route:"/products" },
     { Icon: PersonIcon, title: "Profile" , route:"/users" },
@@ -20,9 +20,12 @@ export default function Sidebar() {
   ];
   useEffect(()=>{
     setActiveIndex(items.findIndex(ele =>window.location.pathname===ele.route))
-  })
+  },[])
   const clickHandler = (index) => {
     setActiveIndex(index);
+     if (setIsSidebarOpen && window.innerWidth < 1200) {
+        setIsSidebarOpen(false);
+    }
   };
 
   return (
@@ -32,7 +35,7 @@ export default function Sidebar() {
       <div className="flex flex-col gap-3">
         {items.map(({ Icon, title,route }, index) => (
           <NavLink to={route} key={index}>
-             <div key={index} onClick={() => clickHandler(index)}>
+             <div key={index} onClick={() => clickHandler(index) } >
             <IconBox Icon={Icon} title={title} active={activeIndex === index} />
           </div>
           </NavLink>

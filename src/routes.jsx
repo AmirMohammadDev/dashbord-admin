@@ -4,7 +4,7 @@ import UserList from "./pages/Users/UserList";
 import Products from "./pages/Products/Products";
 import Login from "./pages/Login/Login";
 let routes=[
-        {path:"/",element:<Home/>},
+        {path:"/home",element:<Home/>},
         {path:"/users",element:<UserList/>},
         {path:"/newUser",element:<NewUser/>},
         {path:"/products",element:<Products/>},
