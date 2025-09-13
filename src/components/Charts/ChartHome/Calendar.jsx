@@ -22,7 +22,7 @@ function CustomCalendarHeader(props) {
                     gap: "10px",
                 },
                 "& .MuiTypography-root": {
-                    backgroundColor: "gray !important",
+                    // backgroundColor: "gray !important",
                 },
                 "& .MuiPickersCalendarHeader-switchViewButton": {
                     display: "none ",
@@ -52,18 +52,21 @@ export default function Calendar() {
                         backgroundColor: "#4318FF",
                         color: "#fff !important",
                         "&:hover": {
-                            backgroundColor: "#4318FF !important",
+                            backgroundColor: "#4318FF",
                         },
                     },
                     "& .dark.MuiPickersDay-root.Mui-selected": {
                         backgroundColor: "#7551FF !important",
                         color: "#fff !important",
                         "&:hover": {
-                            backgroundColor: "#7551FF",
+                            // backgroundColor: "#7551FF !important",
                         },
                     },
                     "& .MuiPickersArrowSwitcher-button:hover": {
-                        backgroundColor: "red",
+                        backgroundColor: "#4318FF",
+                    },
+                    "& .MuiPickersDay-root:focus.Mui-selected": {
+                        backgroundColor: "#4318FF",
                     },
                     "& .MuiPickersDay-root.MuiPickersDay-today": {
                         border: "1px solid #4318FF !important",

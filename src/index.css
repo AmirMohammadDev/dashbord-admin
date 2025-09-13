@@ -70,6 +70,9 @@ color: #ffffff !important;
 .dark .MuiPickersDay-root.Mui-selected{
 background-color: #7551FF !important;
 }
+.dark .MuiPickersDay-root:focus.Mui-selected{
+background-color: #7551FF !important;
+}
 .dark .MuiPickersDay-root.Mui-selected:hover{
 background-color: #7551FF !important;
 }
