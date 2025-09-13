@@ -8,7 +8,7 @@ import LockIcon from '@mui/icons-material/Lock';
 import IconBox from "./IconBox";
 import { NavLink } from "react-router-dom";
 
-export default function Sidebar({ setIsSidebarOpen }) {
+export default function Sidebar({ setIsSidebarOpen, setActiveTitle }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const items = [
@@ -21,8 +21,9 @@ export default function Sidebar({ setIsSidebarOpen }) {
   useEffect(()=>{
     setActiveIndex(items.findIndex(ele =>window.location.pathname===ele.route))
   },[])
-  const clickHandler = (index) => {
+  const clickHandler = (index,title) => {
     setActiveIndex(index);
+     setActiveTitle(title); 
      if (setIsSidebarOpen && window.innerWidth < 1200) {
         setIsSidebarOpen(false);
     }
@@ -35,7 +36,7 @@ export default function Sidebar({ setIsSidebarOpen }) {
       <div className="flex flex-col gap-3">
         {items.map(({ Icon, title,route }, index) => (
           <NavLink to={route} key={index}>
-             <div key={index} onClick={() => clickHandler(index) } >
+             <div key={index} onClick={() => clickHandler(index,title) } >
             <IconBox Icon={Icon} title={title} active={activeIndex === index} />
           </div>
           </NavLink>

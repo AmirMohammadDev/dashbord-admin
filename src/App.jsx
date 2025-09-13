@@ -8,6 +8,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 export default function App() {
     let router = useRoutes(routes);
     const [isSidebarOpen, setIsSidebarOpen] = useState(true);
+    const [activeTitle, setActiveTitle] = useState("Main Dashboard"); // 👈 اینجا
     const sidebarRef = useRef();
 
     useEffect(() => {
@@ -51,13 +52,14 @@ export default function App() {
                 className={`xl:static fixed top-0 left-0 h-full bg-white dark:bg-[#111C44] p-5 transition-transform duration-300 z-50
       ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"} w-[300px]`}
             >
-                <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
+                <Sidebar setIsSidebarOpen={setIsSidebarOpen}  setActiveTitle={setActiveTitle} />
             </div>
             <div className="flex-1 flex flex-col px-5 py-8 w-full overflow-y-auto">
                 <div className="w-[calc(-340px+100vw)] fixed max-xl:w-[calc(-30px+100vw)] z-20 backdrop-blur-[10px] bg-[rgba(244, 247, 254, 0.2)] rounded-4xl max-sm:pb-5">
                     <Topbar
                         onMenuClick={() => setIsSidebarOpen((prev) => !prev)}
                         isSidebarOpen={isSidebarOpen}
+                        activeTitle={activeTitle}
                     />
                 </div>
 

@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
-export default function Topbar({ onMenuClick }) {
+export default function Topbar({ onMenuClick,activeTitle  }) {
   const [darkMode, setDarkMode] = useState(false);
 
   // وقتی کامپوننت اولین بار لود میشه، مود رو از localStorage بخون
@@ -51,7 +51,7 @@ export default function Topbar({ onMenuClick }) {
               <NavLink to={location.pathname.slice(1,location.pathname.lastIndexOf("/"))} className={"inline-block pl-1"}>{location.pathname.split("/")}</NavLink>
             </p>
             <h1 className="font-bold text-4xl cursor-pointer text-blue-900 dark:text-white ">
-              Main Dashboard
+              {activeTitle}
             </h1>
           </div>
         </div>
