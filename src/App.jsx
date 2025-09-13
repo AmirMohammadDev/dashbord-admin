@@ -54,14 +54,14 @@ export default function App() {
                 <Sidebar setIsSidebarOpen={setIsSidebarOpen} />
             </div>
             <div className="flex-1 flex flex-col px-5 py-8 w-full overflow-y-auto">
-                <div className="w-full ">
+                <div className="w-[calc(-340px+100vw)] fixed max-xl:w-[calc(-30px+100vw)] z-20 backdrop-blur-[10px] bg-[rgba(244, 247, 254, 0.2)] rounded-4xl max-sm:pb-5">
                     <Topbar
                         onMenuClick={() => setIsSidebarOpen((prev) => !prev)}
                         isSidebarOpen={isSidebarOpen}
                     />
                 </div>
 
-                <div >{router}</div>
+                <div className="mt-30 max-md:mt-50">{router}</div>
             </div>
         </div>
     );

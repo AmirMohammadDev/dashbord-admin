@@ -43,7 +43,7 @@ export default function Topbar({ onMenuClick }) {
 
   return (
     <div className="w-full h-[100px] max-md:h-[150px]">
-      <div className="flex flex-col md:flex-row justify-between items-center z-30 px-4 max-sm:px-0">
+      <div className="flex flex-col md:flex-row justify-between items-center z-30 px-4 max-sm:px-0 pt-5">
         <div className="flex items-center gap-3 mb-2 md:mb-0">
           <div className="flex flex-col">
             <p className="text-blue-900 dark:text-white text-sm">
