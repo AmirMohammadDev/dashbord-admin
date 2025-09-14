@@ -12,7 +12,7 @@ export default function Sidebar({ setIsSidebarOpen, setActiveTitle }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const items = [
-    { Icon: HomeIcon, title: "Main Dashboard" , route:"/dashbord-admin" },
+    { Icon: HomeIcon, title: "Main Dashboard" , route:"/" },
     { Icon: ShoppingCartIcon, title: "NFT Marketplace" , route:"/newUser" },
     { Icon: BarChartIcon, title: "Data Tables" , route:"/products" },
     { Icon: PersonIcon, title: "Profile" , route:"/users" },
