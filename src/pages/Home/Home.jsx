@@ -15,7 +15,6 @@ import BarChartTrafik from "./../../components/Charts/ChartHome/BarChartTrafik";
 import DataGridTable from "./../../components/Charts/ChartHome/DataGridTable";
 import PieChart from "./../../components/Charts/ChartHome/PieChart";
 import Calendar from "./../../components/Charts/ChartHome/Calendar";
-import CheckBox from "./../../components/Feature/CheckBox";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import Task from "../../components/Feature/Task";
 import Grid from "../../components/Charts/ChartHome/Grid";

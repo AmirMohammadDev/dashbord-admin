@@ -4,6 +4,5 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [tailwindcss(), react()],
-  base: '/dashbord-admin' // این اسم ریپازیتوری شماست
+  plugins: [tailwindcss(), react()], // این اسم ریپازیتوری شماست
 });
