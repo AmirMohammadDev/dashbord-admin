@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Feature from "../../components/Feature/Feature";
 import RealEstateAgentRoundedIcon from "@mui/icons-material/RealEstateAgentRounded";
 import BarChartRoundedIcon from "@mui/icons-material/BarChartRounded";
@@ -68,7 +68,25 @@ export default function Home() {
             </div>
             <div className="py-5 w-full flex gap-5 flex-col">
                 {/* -----------------------------section1----------------------------- */}
-                <section className="flex w-full gap-5 max-md:flex-col">
+               <Section1/>
+                {/* -----------------------------section2----------------------------- */}
+               
+               <Section2 series={series}/>
+                {/* -----------------------------section3----------------------------- */}
+               
+               <Section3/>
+            </div>
+        </>
+    );
+}
+
+
+
+
+function Section1() {
+    return(
+        <>
+         <section className="flex w-full gap-5 max-md:flex-col">
                     <div className="flex flex-col bg-white dark:bg-[#111C44] w-[50%] max-md:w-full rounded-2xl p-5 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                         <div className="flex justify-between">
                             <button className="bg-[#F4F7FE] hover:bg-[#E2E8F0] dark:bg-[#1F294F] dark:text-white dark:hover:bg-[#374062] text-[#A3AED0] py-2 px-4 rounded-xl flex gap-1 items-center cursor-pointer">
@@ -113,8 +131,17 @@ export default function Home() {
                         <BarChart />
                     </div>
                 </section>
-                {/* -----------------------------section2----------------------------- */}
-                <section className="flex w-full gap-5 max-xl:flex-col">
+        </>
+    )
+}
+
+
+
+
+function Section2({series}) {
+    return(
+        <>
+         <section className="flex w-full gap-5 max-xl:flex-col">
                     <div className="flex flex-col bg-white dark:bg-[#111C44] w-[50%] max-xl:w-full rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                         <div className="flex justify-between">
                             <p className="font-bold text-xl dark:text-white">
@@ -217,8 +244,17 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                {/* -----------------------------section3----------------------------- */}
-                <section className="flex w-full gap-5 max-xl:flex-col">
+        </>
+    )
+}
+
+
+
+
+function Section3() {
+    return(
+        <>
+         <section className="flex w-full gap-5 max-xl:flex-col">
                     <div className="flex flex-col bg-white dark:bg-[#111C44] w-[50%] max-xl:w-full rounded-2xl p-6 shadow-[0_8px_30px_rgba(0,0,0,0.08)]">
                         <Grid/>
                     </div>
@@ -249,7 +285,6 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-            </div>
         </>
-    );
+    )
 }
